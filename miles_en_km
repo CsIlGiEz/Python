@@ -1,0 +1,13 @@
+def miles_to_km(miles):
+    return miles * 1.60934
+
+def main():
+    try:
+        distance_miles = float(input("Entrez la distance en miles : "))
+        distance_km = miles_to_km(distance_miles)
+        print(f"{distance_miles} miles est équivalent à {distance_km} km")
+    except ValueError:
+        print("Erreur : Veuillez entrer un nombre valide pour la distance en miles.")
+
+if name == "main":
+    main()
