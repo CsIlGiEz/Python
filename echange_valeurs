@@ -1,0 +1,11 @@
+var1 = "Je dois être en seconde position"
+var2 = "Je dois être en première position"
+
+# Échange des valeurs avec une variable temporaire
+temp = var1
+var1 = var2
+var2 = temp
+
+print(var1 + " | " + var2) 
+# Après avoir complété l'exercice, cela doit afficher :
+# Je dois être en première position | Je dois être en seconde position
