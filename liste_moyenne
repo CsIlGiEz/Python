@@ -1,0 +1,31 @@
+def moyenne_liste_nombres(liste):
+    """
+    Calcule la moyenne des nombres d'une liste.
+
+    Args:
+        liste (list): Une liste de nombres.
+
+    Returns:
+        float: La moyenne des nombres de la liste.
+    """
+    if not liste:
+        return 0
+
+    somme = sum(liste)
+    moyenne = somme / len(liste)
+    return moyenne
+
+try:
+    taille_liste = int(input("Entrez le nombre d'éléments dans la liste : "))
+    if taille_liste <= 0:
+        print("La taille de la liste doit être un nombre positif.")
+    else:
+        liste_nombres = []
+        for i in range(taille_liste):
+            nombre = float(input(f"Entrez l'élément {i + 1} : "))
+            liste_nombres.append(nombre)
+
+        resultat = moyenne_liste_nombres(liste_nombres)
+        print(f"La moyenne des nombres de la liste est : {resultat}")
+except ValueError:
+    print("Vous devez entrer un nombre entier pour la taille de la liste et des nombres valides pour les éléments.")
