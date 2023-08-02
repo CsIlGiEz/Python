@@ -1,10 +1,29 @@
 def afficher_plateau(plateau):
+    """
+    Affiche le plateau de jeu.
+
+    Args:
+        plateau (list): Une liste 2D représentant le plateau de jeu.
+
+    Returns:
+        None
+    """
     for ligne in plateau:
         print("|".join(ligne))
         print("-----")
 
 
 def verifier_victoire(plateau, symbole):
+    """
+    Vérifie s'il y a une victoire pour le symbole donné sur le plateau.
+
+    Args:
+        plateau (list): Une liste 2D représentant le plateau de jeu.
+        symbole (str): Le symbole (X ou O) à vérifier pour la victoire.
+
+    Returns:
+        bool: True si le symbole a gagné, False sinon.
+    """
     # Vérifier les lignes
     for ligne in plateau:
         if ligne.count(symbole) == 3:
@@ -23,6 +42,12 @@ def verifier_victoire(plateau, symbole):
 
 
 def morpion():
+    """
+    Fonction principale pour jouer au morpion.
+
+    Returns:
+        None
+    """
     plateau = [[" " for _ in range(3)] for _ in range(3)]
     symboles = ["X", "O"]
     tour = 0
