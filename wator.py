@@ -174,13 +174,13 @@ class Requin:
 
 
 world = Monde(60, 15)
-world.peupler(100, 18)  # Mettez 10 poissons et 3 requins au départ
+world.peupler(100, 18)  # Mettez 100 poissons et 18 requins au départ
 
 tour = 0  # Initialisation du compteur de tours
 
 while True:
 
-    if tour % 1 == 0: 
+    if tour % 1 == 0:
         for _ in range(10):  # Ajouter 10 poissons à chaque fois
             x_rand = randint(0, world.largeur - 1)
             y_rand = randint(0, world.hauteur - 1)
@@ -198,6 +198,7 @@ while True:
                 x_rand = randint(0, world.largeur - 1)
                 y_rand = randint(0, world.hauteur - 1)
             world.grille[y_rand][x_rand] = Requin(x_rand, y_rand)
+
 
     world.jouer_un_tour()  # Exécute un tour de la simulation
     world.afficher_monde()
